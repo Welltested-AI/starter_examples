@@ -29,3 +29,7 @@ External dependencies need to be mocked and simulated.
 ![DioClient annotated](assets/dio_client_annotation.png)
 2. Run the command: `welltested generate unit`
 ![DioClient tests](assets/dio_client_test.png)
+
+
+
+For reference, you may find the final generated tests in the `/generated-tests` branch
