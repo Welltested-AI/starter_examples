@@ -1,5 +1,8 @@
 import 'dart:math' as math;
 
+import 'package:welltested_annotation/welltested_annotation.dart';
+
+@Welltested()
 class Calculator {
   // Define add function
   double add(double a, double b) {

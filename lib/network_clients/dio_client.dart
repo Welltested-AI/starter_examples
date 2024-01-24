@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:welltested_annotation/welltested_annotation.dart';
 
+@Welltested()
 class DioClient {
   final Dio dioClient;
 
