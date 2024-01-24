@@ -1,16 +1,31 @@
 # starter_examples
 
-A new Flutter project.
+Curated examples to try out unit test generation with welltested.
 
-## Getting Started
+The repository consists of following types of examples:
 
-This project is a starting point for a Flutter application.
+##### 1. Basic
+No external dependencies and hence no mocking required.
+- [`lib/utility/calculator.dart`](lib/utility/calculator.dart) - Basic arithmetic operations .
+##### 2. With External Dependencies
+External dependencies need to be mocked and simulated.
+- [`lib/network_clients/dio_client.dart`](lib/network_clients/dio_client.dart): Network request with Dio Client mocked.
 
-A few resources to get you started if this is your first Flutter project:
+### To Get Started.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. First, activate the cli using `dart pub global activate welltested`.
+2. In the root of your project, do a `welltested init` and insert your API Key.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Steps to generate test (Basic).
+
+1. Annotate `Calculator` with @Welltested
+![Calculator annotated](assets/calculator_annotated.png)
+2. Run the command: `welltested generate unit`
+![Calculator tests](assets/calculator_tests.png)
+
+### Steps to generate test (With External Dependencies).
+
+1. Annotate `DioClient` with @Welltested
+![DioClient annotated](assets/dio_client_annotation.png)
+2. Run the command: `welltested generate unit`
+![DioClient tests](assets/dio_client_test.png)
